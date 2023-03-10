@@ -1,7 +1,7 @@
 package com.example.firebase21
 
 
-import android.R
+
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.text.TextUtils
@@ -67,8 +67,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         progressDialog!!.show()
 
         //creating a new user
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this,
+        firebaseAuth?.createUserWithEmailAndPassword(email, password)
+            ?.addOnCompleteListener(this,
                 OnCompleteListener { task -> //checking if success
                     if (task.isSuccessful) {
                         //display some message here
